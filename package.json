@@ -1,0 +1,24 @@
+{
+  "name": "revolver-modal",
+  "version": "1.0.0",
+  "description": "A simple modal hook for React",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChuckBDT/revolver-modal.git"
+  },
+  "keywords": [
+    "react",
+    "modal",
+    "hook"
+  ],
+  "author": "Charles Boudrant",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChuckBDT/revolver-modal/issues"
+  },
+  "homepage": "https://github.com/ChuckBDT/revolver-modal#readme"
+}
