@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import closeIcon from "./assets/closeIcon";
 
-function useModal(props) {
+function useModal() {
   const [open, setOpen] = useState(false);
   const modalRef = useRef(null);
 
@@ -35,7 +35,7 @@ function useModal(props) {
               className='absolute top-3 right-3 cursor-pointer'
               onClick={() => triggerModal()}
             >
-              <closeIcon fill={props.closeFill} />
+              {closeIcon}
             </div>
             <div className='useModal-content py-2'>{content}</div>
           </div>
@@ -45,7 +45,7 @@ function useModal(props) {
   }
 
   function triggerModal() {
-    setOpen(true);
+    setOpen(!open);
   }
 
   return [setContent, triggerModal];
