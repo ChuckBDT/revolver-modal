@@ -1,5 +1,12 @@
 import { useState, useEffect, useRef } from "react";
 
+/**
+ * Custom React hook for creating a modal
+ *
+ * @returns {[Function, Function]} Returns an array containing two functions:
+ *    1. setContent - A function that takes in the modal content as a parameter and returns the modal component
+ *    2. triggerModal - A function that toggles the modal's open state
+ */
 function useModal() {
   const [open, setOpen] = useState(false);
   const modalRef = useRef(null);
