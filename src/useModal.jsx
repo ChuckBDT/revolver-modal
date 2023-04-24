@@ -32,7 +32,7 @@ function useModal() {
   function setContent(content) {
     if (open) {
       return (
-        <div className='useModal-bg fixed top-0 z-10 h-screen w-screen bg-primary/25 overflow-hidden flex justify-center items-center'>
+        <div className='useModal-bg fixed left-0 top-0 z-10 h-screen w-screen bg-primary/25 overflow-hidden flex justify-center items-center'>
           <div
             ref={modalRef}
             className='useModal-frame relative bg-tertiary p-8 m-4 rounded-2xl shadow-lg'
