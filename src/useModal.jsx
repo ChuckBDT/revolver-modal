@@ -30,7 +30,9 @@ function useModal() {
   }, [open]);
 
   function setContent(content) {
+    document.body.style.overflow = "unset";
     if (open) {
+      document.body.style.overflow = "hidden";
       return (
         <div className='useModal-bg fixed left-0 top-0 z-10 h-screen w-screen bg-primary/25 overflow-hidden flex justify-center items-center'>
           <div
