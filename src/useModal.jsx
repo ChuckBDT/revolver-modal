@@ -30,7 +30,7 @@ function useModal() {
   }, [open]);
 
   function setContent(content) {
-    document.body.style.overflow = "unset";
+    document.body.style.overflow = "";
     if (open) {
       document.body.style.overflow = "hidden";
       return (
