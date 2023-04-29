@@ -2,7 +2,11 @@
 
 #
 
-Revolver Modal is a custom React hook dedicated to simplify the creation of modals for React
+Revolver Modal is a custom React hook dedicated to simplify the creation of modals for React, it has no dependencies and is made to be the lightest possible
+
+## Dependencies
+
+- `React` : 16.8.0 or later
 
 ## Installation
 
