@@ -16,7 +16,7 @@
     "hook"
   ],
   "author": "Charles Boudrant",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/ChuckBDT/revolver-modal/issues"
   },
