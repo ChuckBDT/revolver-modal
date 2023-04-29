@@ -47,9 +47,9 @@ function useModal() {
               >
                 <path
                   fill='none'
-                  stroke-linecap='round'
-                  stroke-linejoin='round'
-                  stroke-width='32'
+                  strokeLinecap='round'
+                  strokeLinejoin='round'
+                  strokeWidth='32'
                   d='M368 368L144 144m224 0L144 368'
                 ></path>
               </svg>
