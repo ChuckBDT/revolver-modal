@@ -11,7 +11,7 @@ Revolver Modal is a custom React hook dedicated to simplify the creation of moda
 ## Installation
 
 ```
-Not yet published on NPM
+npm i revolver-modal
 ```
 
 ## Usage
@@ -22,7 +22,7 @@ Not yet published on NPM
 2. `triggerModal` - A function that toggles the modal's open state
 
 ```jsx
-import useModal from "NotYetPublishedOnNPM";
+import useModal from "revolver-modal";
 
 function ExampleComponent() {
   const [setContent, triggerModal] = useModal();
