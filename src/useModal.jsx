@@ -19,14 +19,23 @@ function useModal() {
       }
     }
 
+    function handleKeyDown(e) {
+      if (e.keyCode === 27) {
+        setOpen(false);
+      }
+    }
+
     if (open) {
+      document.addEventListener("keydown", handleKeyDown);
       document.addEventListener("mousedown", handleClickOutside);
     } else {
       document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("keydown", handleKeyDown);
     }
 
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("keydown", handleKeyDown);
     };
   }, [open]);
 
@@ -37,7 +46,17 @@ function useModal() {
       return (
         <div className='useModal'>
           <div ref={modalRef} className='useModal-frame'>
-            <div className='useModal-closeBtn' onClick={() => triggerModal()}>
+            <div className='useModal-content' tabIndex={0}>
+              {content}
+            </div>
+            <div
+              className='useModal-closeBtn'
+              tabIndex={0}
+              onClick={() => triggerModal()}
+              onKeyDown={(e) => {
+                if (e.keyCode === 13) triggerModal();
+              }}
+            >
               <svg
                 strokeWidth='0'
                 viewBox='0 0 512 512'
@@ -54,7 +73,6 @@ function useModal() {
                 ></path>
               </svg>
             </div>
-            <div className='useModal-content'>{content}</div>
           </div>
         </div>
       );
