@@ -11,6 +11,7 @@ import "./assets/useModal.css";
 function useModal() {
   const [open, setOpen] = useState(false);
   const modalRef = useRef(null);
+  const contentRef = useRef(null);
 
   useEffect(() => {
     function handleClickOutside(event) {
@@ -28,9 +29,12 @@ function useModal() {
     if (open) {
       document.addEventListener("keydown", handleKeyDown);
       document.addEventListener("mousedown", handleClickOutside);
+      document.getElementById("root").setAttribute("aria-hidden", "true");
+      contentRef.current.focus();
     } else {
       document.removeEventListener("mousedown", handleClickOutside);
       document.removeEventListener("keydown", handleKeyDown);
+      document.getElementById("root").setAttribute("aria-hidden", "false");
     }
 
     return () => {
@@ -45,8 +49,13 @@ function useModal() {
       document.body.style.overflow = "hidden";
       return (
         <div className='useModal'>
-          <div ref={modalRef} className='useModal-frame'>
-            <div className='useModal-content' tabIndex={0}>
+          <div
+            ref={modalRef}
+            aria-modal={true}
+            role='dialog'
+            className='useModal-frame'
+          >
+            <div ref={contentRef} className='useModal-content' tabIndex={0}>
               {content}
             </div>
             <div
