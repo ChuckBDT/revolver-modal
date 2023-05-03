@@ -1,4 +1,4 @@
-![Illustration](./Illustration.png)
+![Illustration](./Illustration.webp)
 
 #
 
