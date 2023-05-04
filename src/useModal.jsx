@@ -21,9 +21,15 @@ function useModal() {
     }
 
     function handleKeyDown(e) {
-      if (e.keyCode === 27) {
+      if (e.key === "Escape") {
         setOpen(false);
       }
+      // else if (e.shiftKey && e.key === "Tab") {
+      //   if (modalRef.current && !modalRef.current.contains(e.target)) {
+      //     console.log(e.target);
+      //     console.log("OUT");
+      //   }
+      // }
     }
 
     if (open) {
@@ -63,7 +69,7 @@ function useModal() {
               tabIndex={0}
               onClick={() => triggerModal()}
               onKeyDown={(e) => {
-                if (e.keyCode === 13) triggerModal();
+                if (e.key === "Enter") triggerModal();
               }}
             >
               <svg
